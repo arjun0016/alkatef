@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Slab:wght@600&display=swap');
+
+/* Navbar.css */
+.nav {
+  position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f6f6;
+    color: #fff;
+    padding: 17px 20px;
+    width:92%;
+    left:55px;
+    /* font-family: 'Libre Baskerville', serif; */
+    font-size: 18px;
+    overflow: hidden;
+    z-index: 1;
+
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #cf826bcb;
+    margin: 0 20px;
+    transition: color 0.3s; /* Add a smooth color transition */
+  }
+  
+  .nav a:hover {
+    color: #da5c3f; /* Change link color on hover */
+  }
+  
+  .navbar__center {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .navbar__right {
+    display: flex;
+    align-items: center;
+  }
+ 
+  .menuButton{
+    color: #da5c3f;
+    display: none;
+  }
+
+  @media screen and (max-width:768px) {
+  .nav{
+    width:85%;
+    left:25px;
+    z-index: 1;
+    position: fixed;
+
+  }
+  .menuButton{
+  display: block;
+  border: 0;
+  font-size: 24px;
+}
+.nav a{
+  display: none;
+
+}
+
+
+}

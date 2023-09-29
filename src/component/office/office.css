@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Slab:wght@600&display=swap');
+
+
+.office{
+    position: relative;
+    margin-top: 100px;
+    overflow: hidden;
+}
+.officeImg{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+.officeContent{
+    position: absolute;
+    background-color: white;
+    font-family: 'Libre Baskerville', serif;
+    width: 761px;
+    height: 440px;
+    top: 100px;
+    left: 758px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    color: #cf826bcb;
+    font-size: 20px;
+}
+.op{
+    
+    width: 460px;
+
+}
+@media screen and (max-width:768px) {
+
+    .officeImg {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+    .officeContent{
+    position: absolute;
+    background-color: white;
+    font-family: 'Libre Baskerville', serif;
+    width: 350px;
+    height: 450px;
+    top: 70px;
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    color: #cf826bcb;
+    font-size: 20px;
+}
+.op{
+    
+    width: 250px;
+    font-size: 18px;
+    overflow: hidden;
+
+}
+    
+}

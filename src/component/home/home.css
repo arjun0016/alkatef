@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Slab:wght@600&display=swap');
+
+
+.homeContent{
+    position: relative;
+    overflow: hidden;
+}
+.banner{
+
+    object-fit:cover;
+    height:800px;
+    width:97%;
+    margin-left: 20px;
+    
+}
+.nav{
+    position: absolute;
+    margin:auto;
+}
+
+.content{
+    position: absolute;
+    top:20%;
+    left:7%;
+    height: 400px;
+
+
+    position: absolute;
+    bottom: 0;
+    animation: slideUp 2s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+    50% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.content p {
+    color: orange;
+    font-weight: 600;
+    font-size: 19px;
+    width:500px
+
+
+}
+.content h3 {
+    color: white;
+    text-align: start;
+    font-weight:800;
+    font-size:60px;
+    line-height: 1;
+    font-family: 'Libre Baskerville', serif;
+    width:500px
+}
+
+.content h4 {
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+.content button{
+    border-radius: 0%;
+    width: 175px;
+
+}
+.content button:hover{
+    color:rgb(255, 111, 0);
+    width: 175px;
+    border-radius: 0%;
+}
+
+
+
+
+
+.downArrow{
+    position: absolute;
+    top: 765px;
+    left:50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+     justify-content: center;
+    background-color: rgb(241, 239, 239);
+    color: orange;
+    border-radius: 10%;
+}
+
+
+.downIcon{
+    animation: bounceUpDown 1s infinite alternate; 
+}
+
+@keyframes bounceUpDown {
+  0% {
+    transform: translateY(0); 
+  }
+  100% {
+    transform: translateY(+6px); 
+  }
+}
+
+@media screen and (max-width:768px) {
+
+    .banner{
+        width: 95%;
+        overflow: hidden;
+        margin-left: 10px;
+}
+
+    .content {
+        position: absolute;
+        top: 13%;
+        left: 4%;
+        font-size: 16px;
+        height: auto;
+    }
+    .content h3 {
+        letter-spacing:-3px;
+        line-height: 0.9;
+
+        width:310px
+    }
+    .content p {
+        letter-spacing:0px;
+        width:250px;  
+    }
+    
+
+}

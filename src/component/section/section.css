@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Slab:wght@600&display=swap');
+
+
+.section{
+    display: flex;
+    margin-top: 150px;
+    margin-left: 180px;
+    overflow: hidden;
+}
+.director{
+    margin-top: 100px;
+    margin-left: 150px;
+    font-size: 22px;
+    color: #da5c3f; /* Change link color on hover */
+    font-family: 'Libre Baskerville', serif;   
+
+}
+.director h3{
+    font-weight: 800;
+    font-size: 40px;
+}
+.image{
+    width: 590px;
+    height: 650px;
+    object-fit: cover;
+}
+.dp{
+    width: 500px;
+}
+
+@media  (max-width:768px) {
+    .section{
+        display:block; 
+        margin-left:  0 !important;;
+        margin-top: 150px;
+        overflow: hidden;
+    }
+    .director{
+        margin-top: 10px;
+        font-size: 22px;
+        margin-left: 15px;
+        color: #da5c3f; /* Change link color on hover */
+        font-family: 'Libre Baskerville', serif;   
+    
+    }
+    .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+        margin: auto;
+        width: 350px;
+        height: 450px;
+    }
+    .dp {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: start;
+        width: 310px;
+    }
+    .director {
+       
+        margin-top: 60px;
+        font-size: 18px;
+        color: #da5c3f;
+        font-family: 'Libre Baskerville', serif;
+    }
+    
+}
