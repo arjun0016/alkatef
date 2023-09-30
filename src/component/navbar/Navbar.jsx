@@ -2,16 +2,39 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './navbar.css';
 import {AiOutlineDown,AiOutlineMenu} from 'react-icons/ai';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import {Drawer} from '@mui/material'
 
 
 
-const Navbar = () => {
+
+ 
+
+function ScrollNavbar() {
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [open,setOpen]=useState(false);
 
+  const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
+  const [isScrollingDown, setIsScrollingDown] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setIsScrollingDown(prevScrollpos > currentScrollPos);
+      setPrevScrollpos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollpos]);
+
+  const navbarStyle = {
+    position: isScrollingDown ? "fixed" : "absolute",
+  };
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
@@ -25,7 +48,7 @@ const Navbar = () => {
   
   return (
    
-    <nav className="nav">
+    <nav className="nav" id="navbar" style={navbarStyle} >
       <div className="navbar__left ms-4">
         <a href="/">About us</a>
         <a href="/">Services</a>
@@ -73,4 +96,4 @@ const Navbar = () => {
   )
 };
 
-export default Navbar
+export default ScrollNavbar

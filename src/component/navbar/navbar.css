@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Slab:wght@600&display=swap');
 
-/* Navbar.css */
 .nav {
-  position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,11 +9,9 @@
     padding: 17px 20px;
     width:92%;
     left:55px;
-    /* font-family: 'Libre Baskerville', serif; */
     font-size: 18px;
     overflow: hidden;
-    z-index: 1;
-
+    z-index: 1; 
   }
   
   .nav a {
